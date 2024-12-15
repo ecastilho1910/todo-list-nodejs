@@ -54,5 +54,11 @@ User.find({ username: 'admin@snyk.io' }).exec(function (err, users) {
         console.log('error saving admin user');
       }
     });
+
+    new User({ username: 'ecast@snyk.io', password: 'SuperSecretPassword' }).save(function (err, user, count) {
+      if (err) {
+        console.log('error saving admin user');
+      }
+    });
   }
 });
