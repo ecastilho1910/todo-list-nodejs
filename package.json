@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "NODE_OPTIONS=--openssl-legacy-provider nodemon ./app.js",
-    "start": "NODE_OPTIONS=--openssl-legacy-provider",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider node ./app.js",
     "build": "browserify -r jquery > public/js/bundle.js",
     "cleanup": "mongo express-todo --eval 'db.todos.remove({});'",
     "test": "snyk test"
@@ -56,6 +56,7 @@
   },
   "license": "Apache-2.0",
   "engines": {
-    "node": "6.11.1"
+    "node": "6.11.1",
+    "npm": "10.9.2"
   }
 }
